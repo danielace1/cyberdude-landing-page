@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800;900&display=swap");
+
+:root {
+  --primary-color: #e25e3b;
+  --dark-primary: #1b1f24;
+  --white-color: #fff;
+  --text-color: #c4c4c4;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header */
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.nav-item {
+  margin-right: 25px;
+  font-weight: 500;
+  opacity: 1;
+  transition: all 0.3s ease-out 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--dark-primary);
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+
+.hamburger-menu-button {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  border: none;
+  box-sizing: content-box;
+  color: transparent;
+  overflow: hidden;
+}
+
+.hamburger-menu-button-open,
+.hamburger-menu-button-open::before,
+.hamburger-menu-button-open::after {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: var(--dark-primary);
+  transition: all 0.3s;
+}
+
+.hamburger-menu-button-open::before,
+.hamburger-menu-button-open::after {
+  left: 0;
+  content: "";
+}
+
+.hamburger-menu-button-open::before {
+  top: 7px;
+}
+
+.hamburger-menu-button-open::after {
+  bottom: 7px;
+}
+
+.hamburger-menu-button-close {
+  background: transparent;
+  transform: rotate(90deg);
+}
+.hamburger-menu-button-close::before {
+  transform: translateY(-6px) rotate(45deg);
+}
+.hamburger-menu-button-close::after {
+  transform: translateY(6px) rotate(-45deg);
+}
+
+/* Home Section */
+section.home-section {
+  background-color: var(--dark-primary);
+  color: var(--white-color);
+  padding: 100px 0;
+}
+
+.home-section__title {
+  margin-top: 150px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.home-section__title span.badge {
+  background-color: var(--primary-color);
+  transition: 500ms;
+  animation: color-change 10s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: violet;
+  }
+  50% {
+    color: aquamarine;
+  }
+  100% {
+    color: yellowgreen;
+  }
+}
+
+.home-section__desc {
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.home-buttons {
+  margin-top: 40px;
+}
+
+.home-buttons button {
+  padding: 12px 0;
+  color: var(--dark-primary);
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.home-buttons button:hover {
+  background: var(--primary-color) !important;
+  color: var(--white-color);
+  transition: all 0.3s;
+}
+
+.home-buttons a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--white-color);
+  transition: all 0.3s;
+}
+
+.home-buttons a:hover {
+  color: var(--primary-color);
+  transition: all 0.3s;
+}
+
+.home-buttons a:hover .fa-play {
+  color: var(--primary-color);
+  transition: all 0.3s;
+}
+
+.playbtn > .fa-play {
+  font-size: 18px;
+  margin: 0 10px 0 20px;
+  background-color: var(--white-color);
+  color: var(--dark-primary);
+  padding: 12px 14px;
+  border-radius: 50%;
+}
+
+/* Courses Section */
+section.courses-section {
+  background-color: #22282f;
+  color: var(--white-color);
+  padding: 60px 0;
+}
+
+.courses-heading {
+  text-align: center;
+  max-width: 580px;
+  margin: auto;
+}
+
+.courses-section__title {
+  width: fit-content;
+  margin: auto;
+  padding: 8px 25px;
+  border-radius: 25px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.courses-section__desc {
+  width: fit-content;
+  margin: 20px 0;
+  font-size: 15px;
+  color: var(--white-color);
+}
+
+.courses-cards {
+  height: 23em;
+  background-color: var(--dark-primary);
+  color: var(--white-color);
+  padding: 20px;
+  margin: 20px 0;
+  transition: all 0.3s;
+}
+
+.courses-cards:hover {
+  transition: all 0.3s;
+  box-shadow: 0px 2px 4px var(--primary-color),
+    0px 8px 16px var(--primary-color);
+  transform: translateY(-6px);
+}
+
+.courses-card__img {
+  width: 100px;
+}
+
+.courses-card__img.node-js {
+  margin-top: -15px;
+}
+
+.courses-cards .card-title {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.courses-cards .card-text {
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Team Section */
+section.team-section {
+  background-color: var(--dark-primary);
+  padding: 60px 0;
+}
+
+.manager-cards {
+  margin-top: 25px;
+  position: relative;
+  border-radius: 8px;
+  border: none;
+}
+
+.manager-cards .card-body {
+  padding: 0px;
+}
+
+.superior-images img {
+  width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.name-position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  text-align: center;
+  border: none;
+  padding: 10px 15px 20px;
+  width: 100%;
+  transition: all 0.3s ease-in 0s;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  background-color: #22282f;
+}
+
+.name-position h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px auto;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in 0s;
+  color: var(--white-color);
+}
+
+.name-position p {
+  margin-bottom: 5px;
+  margin-top: -5px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  transition: all 0.3s ease-in 0s;
+  color: var(--primary-color);
+}
+
+.manager-cards:hover .name-position {
+  padding-top: 40px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in 0s;
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.manager-cards:hover .name-position h4,
+.manager-cards:hover .name-position p {
+  color: var(--white-color);
+}
+
+.name-position ul {
+  display: none;
+}
+
+.manager-cards:hover .name-position ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 25px;
+  margin: auto;
+  padding: 6px 15px 6px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.manager-cards:hover .name-position .brand {
+  font-size: 18px;
+  padding: 5px 12px;
+  color: var(--icon-color);
+  transition: all 0.3s ease-in 0s;
+}
+
+.manager-cards:hover .name-position .brand:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
